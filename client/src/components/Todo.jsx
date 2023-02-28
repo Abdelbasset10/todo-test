@@ -38,7 +38,7 @@ const Todo = ({todo}) => {
   }
 
   return (
-    <div className={`p-4 border-1 rounded-3xl bg-white relative ${todo?.completed && 'bg-green-300'}`}>
+    <div className={`p-4 border-1 rounded-3xl bg-white relative ${todo?.completed && 'bg-green-600'}`}>
         <p className=' md:max-w-[31rem] lg:text-xl font-bold' >{todo?.title}</p>
         {showMore && (
           <div>
@@ -61,7 +61,7 @@ const Todo = ({todo}) => {
         
         <div className='lg:absolute lg:right-4 mt-4 lg:mt-0 flex items-center gap-2 sm:gap-4 top-4' >
           <MdDelete className='text-2xl text-red cursor-pointer' onClick={handleDelete} />
-          <FaEdit className='text-2xl text-primary-green cursor-pointer' onClick={()=>openUpdateTodo(todo.id)} />
+          <FaEdit className='text-2xl text-green-800 cursor-pointer' onClick={()=>openUpdateTodo(todo.id)} />
           {showMore ? (
             <FaArrowAltCircleUp className='text-2xl text-blue cursor-pointer' onClick={()=>setShowMore(!showMore)} />
           ) : (

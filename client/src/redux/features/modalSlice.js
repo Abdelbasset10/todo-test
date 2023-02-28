@@ -21,6 +21,7 @@ const modalSlice = createSlice({
             state.nestedTodoModal = false
             state.todoModal = false
             state.nestedTodoId = null
+            state.todoId = null
         },
         updateNestedTodoModal : (state, action) => {
             state.nestedTodoModal = true

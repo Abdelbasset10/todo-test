@@ -23,7 +23,7 @@ const NestedTodo = ({todo,fotherId,nested,setNested}) => {
     }
     
     return (
-        <div className={`p-4 border-1 rounded-3xl bg-secondaryDark ${todo.completed ? 'text-black' : 'text-white'} relative ${todo.completed && 'bg-third-green'}`}>
+        <div className={`p-4 border-1 rounded-3xl bg-secondaryDark ${todo.completed ? 'text-black' : 'text-white'} relative ${todo.completed && 'bg-green-400'}`}>
             <p className=' md:max-w-[31rem] lg:text-xl font-bold' >{todo?.title}</p>
                 <div>
                     <p> <span className='font-bold' >Description :</span> {todo.description}</p>
@@ -32,7 +32,7 @@ const NestedTodo = ({todo,fotherId,nested,setNested}) => {
                 </div>  
             <div className='lg:absolute lg:right-4 mt-4 lg:mt-0 flex items-center gap-2 sm:gap-4 bottom-[30%]' >
                 <MdDelete className='text-2xl text-red cursor-pointer' onClick={handleDelete} />
-                <FaEdit className='text-2xl text-primary-green cursor-pointer' onClick={openUpdaeNested}   />  
+                <FaEdit className='text-2xl text-green-800 cursor-pointer' onClick={openUpdaeNested}   />  
             </div>
         </div>
     )
