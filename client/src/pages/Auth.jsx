@@ -29,21 +29,21 @@ const Auth = () => {
     }
   }
   return (
-    <div className='bg-secondaryDark h-[90.8vh] flex items-center justify-center'>
-      <div className='border-2 border-white p-4 w-9/12 sm:w-7/12 md:w-6/12 lg:w-5/12' >
-        <h1 className='text-3xl text-white mb-8' >{isSignUp ? 'Sign Up' : 'Sign In'}</h1>
+    <div className='bg-[#374151] h-[90.8vh] flex items-center justify-center'>
+      <div className='border-2 border-[white] p-4 w-9/12 sm:w-7/12 md:w-6/12 lg:w-5/12' >
+        <h1 className='text-3xl text-[white] mb-8' >{isSignUp ? 'Sign Up' : 'Sign In'}</h1>
         <form className='flex flex-col gap-4' onSubmit={handleSubmit} >
           <input type="email"
-          className='h-10 border-2 border-white outline-none p-2'
+          className='h-10 border-2 border-[white] outline-none p-2'
           placeholder='Your Email...'
           name='userEmail'
           value={userEmail}
           onChange={handleChange} />
-          <button className='bg-white text-secondaryDark h-10 hover:bg-primaryDark hover:text-white' >{isSignUp ? 'Sign Up' : 'Sign In'}</button>
+          <button className='bg-[white] text-[#374151] h-10 hover:bg-[#1F2937] hover:text-[white]' >{isSignUp ? 'Sign Up' : 'Sign In'}</button>
         </form>
         <div className='flex flex-col sm:flex-row items-center gap-2 mt-4'>
-          <p className='text-white' >{isSignUp ? "Already have Account ? " : "Don't Have Account ?"}</p>
-          <p className='cursor-pointer text-black hover:text-blue' onClick={()=>setIsSignUp(!isSignUp)} >
+          <p className='text-[white]' >{isSignUp ? "Already have Account ? " : "Don't Have Account ?"}</p>
+          <p className='cursor-pointer text-[black] hover:text-blue-600' onClick={()=>setIsSignUp(!isSignUp)} >
             {isSignUp ? 'Sign In' : 'Sign Up'}
           </p>
         </div>

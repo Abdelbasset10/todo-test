@@ -16,12 +16,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='sticky top-0 z-20 w-full px-8 py-2 flex flex-col md:flex-row justify-between items-center bg-primaryDark text-white'>
+    <nav className='sticky top-0 z-20 w-full px-8 py-2 flex flex-col md:flex-row justify-between items-center bg-[#1F2937] text-[white]'>
       <div>
         <img src={logo} alt="logoPhoto" />
       </div>
       {userData && (
-        <button className='border-2 border-white bg-white text-black px-4 py-2' onClick={()=>dispatch(AddTodoModal())}>
+        <button className='border-2 border-[white] bg-[white] text-[black] px-4 py-2' onClick={()=>dispatch(AddTodoModal())}>
           Add New Todo
         </button>
       )}
@@ -29,7 +29,7 @@ const Navbar = () => {
         {userData && (
           <p className='my-2' >Welcome {userData[0]?.email}</p>
         )}
-        <button className='border-2 border-white bg-white text-black px-4 py-2' onClick={handleClearUser} >LogOut</button>
+        <button className='border-2 border-[white] bg-[white] text-[black] px-4 py-2' onClick={handleClearUser} >LogOut</button>
       </div>
     </nav>
   )

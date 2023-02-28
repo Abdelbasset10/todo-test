@@ -38,7 +38,7 @@ const Todo = ({todo}) => {
   }
 
   return (
-    <div className={`p-4 border-1 rounded-3xl bg-white relative ${todo?.completed && 'bg-green-600'}`}>
+    <div className={`p-4 border-1 rounded-3xl bg-[white] relative ${todo?.completed && 'bg-green-300'}`}>
         <p className=' md:max-w-[31rem] lg:text-xl font-bold' >{todo?.title}</p>
         {showMore && (
           <div>
@@ -55,15 +55,15 @@ const Todo = ({todo}) => {
                 )
             })}
             </div>
-            <p className='mt-4 cursor-pointer text-black hover:text-secondaryDark' onClick={openNestedTodoModal} >Add New Nested Todo</p>
+            <p className='mt-4 cursor-pointer text-[black] hover:text-[#374151]' onClick={openNestedTodoModal} >Add New Nested Todo</p>
           </div>
         )}
         
         <div className='lg:absolute lg:right-4 mt-4 lg:mt-0 flex items-center gap-2 sm:gap-4 top-4' >
-          <MdDelete className='text-2xl text-red cursor-pointer' onClick={handleDelete} />
+          <MdDelete className='text-2xl text-red-600 cursor-pointer' onClick={handleDelete} />
           <FaEdit className='text-2xl text-green-800 cursor-pointer' onClick={()=>openUpdateTodo(todo.id)} />
           {showMore ? (
-            <FaArrowAltCircleUp className='text-2xl text-blue cursor-pointer' onClick={()=>setShowMore(!showMore)} />
+            <FaArrowAltCircleUp className='text-2xl text-blue-600 cursor-pointer' onClick={()=>setShowMore(!showMore)} />
           ) : (
             <FaArrowCircleDown className='text-2xl text-blue cursor-pointer' onClick={showTodoIndo} />
           )}

@@ -26,18 +26,18 @@ const Home = () => {
 
     if(userTodos.length === 0) {
       return (
-        <div className='w-full bg-secondaryDark min-h-[90.8vh]'>
+        <div className='w-full bg-[#374151] min-h-[90.8vh]'>
           <div className='w-11/12 mx-auto py-10'>
-            <p className='text-white text-3xl' >You don't have todos for Now..</p>
+            <p className='text-[white] text-3xl' >You don't have todos for Now..</p>
           </div>
         </div>
       )
     }
   
   return (
-    <div className='w-full bg-secondaryDark min-h-[90.8vh]' >
+    <div className='w-full bg-[#374151] min-h-[90.8vh]' >
       <div className='w-11/12 mx-auto py-10'>
-        <h1 className='text-lg sm:text-3xl text-white mb-4' >The Todos are ordered by <span className='font-bold'>pos</span> value</h1>
+        <h1 className='text-lg sm:text-3xl text-[white] mb-4' >The Todos are ordered by <span className='font-bold'>pos</span> value</h1>
         <div className='flex flex-col gap-4 w-full' >
           {userTodos.map((todo,index)=>{  
             return (

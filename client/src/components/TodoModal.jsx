@@ -52,31 +52,30 @@ const TodoFrom = () => {
         
     }
   return (
-    <div className='fixed top-0 w-full h-screen bg-modal z-20 flex items-center justify-center' >
-        <div className='relative w-11/12 sm:w-8/12 md:w-7/12 lg:w-6/12 bg-white p-4'>
-            <FaTimes className='text-red text-3xl absolute top-4 right-4 cursor-pointer' onClick={()=>dispatch(closeModal())} />
+    <div className='fixed top-0 w-full h-screen bg-[rgba(0,0,0,0.4)] z-20 flex items-center justify-center' >
+        <div className='relative w-11/12 sm:w-8/12 md:w-7/12 lg:w-6/12 bg-[white] p-4'>
+            <FaTimes className='text-red-600 text-3xl absolute top-4 right-4 cursor-pointer' onClick={()=>dispatch(closeModal())} />
             <h1 className='text-center text-lg sm:text-3xl mb-10' >{todoId ? 'Update Todo' : 'Add New Todo'}</h1>
             <form className='flex flex-col gap-4' onSubmit={handleSubmit} >
                 <input type="text"
-                className='h-10 border-2 border-secondaryDark outline-none p-2'
+                className='h-10 border-2 border-[#374151] outline-none p-2'
                 placeholder='Todo title...'
                 name="title"
                 value={todoInfo?.title}
                 onChange={handleChange} />
                 <input type="text"
-                className='h-10 border-2 border-secondaryDark outline-none p-2'
+                className='h-10 border-2 border-[#374151] outline-none p-2'
                 placeholder='Todo description...'
                 name="description"
                 value={todoInfo?.description}
                 onChange={handleChange} />
                 <input type="date"
-                className='h-10 border-2 border-secondaryDark outline-none p-2'
-                placeholder='Todo title...'
+                className='h-10 border-2 border-[#374151] outline-none p-2'
                 name="endDate"
                 value={todoInfo?.endDate}
                 onChange={handleChange} />
                 <input type="number"
-                className='h-10 border-2 border-secondaryDark outline-none p-2'
+                className='h-10 border-2 border-[#374151] outline-none p-2'
                 placeholder='Todo title...'
                 name="pos"
                 value={todoInfo?.pos}
@@ -89,7 +88,7 @@ const TodoFrom = () => {
                 value={todoInfo.completed}
                 onChange={handleChange} />
             </div>
-                <button className='h-10 text-white bg-secondaryDark' >{todoId ? 'Update' : 'Add'}</button>
+                <button className='h-10 text-[white] bg-[#374151]' >{todoId ? 'Update' : 'Add'}</button>
             </form>
     </div>
     </div>
